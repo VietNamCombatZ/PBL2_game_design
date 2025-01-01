@@ -1,0 +1,1 @@
+../../Cellar/little-cms2/2.16/lib/pkgconfig/lcms2.pc

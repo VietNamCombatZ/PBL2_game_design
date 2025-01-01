@@ -1,4 +1,4 @@
-#include <sprite_component.h>
+#include "../include/headers/sprite_component.h"
 SpriteComponent::SpriteComponent() {}
 SpriteComponent::SpriteComponent(const char *texture_file, TransformComponent *_transform, bool _animated)
 {

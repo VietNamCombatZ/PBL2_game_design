@@ -1,7 +1,7 @@
 #pragma once
 
-#include <texture_manager.h>
-#include <transform_component.h>
+#include "texture_manager.h"
+#include "transform_component.h"
 class EnemyHealthBar
 {
 private:

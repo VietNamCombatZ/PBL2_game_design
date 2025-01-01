@@ -1,7 +1,7 @@
-#include <player_manager.h>
-#include <texture_manager.h>
-#include <player_skill_e.h>
-#include <sound_manager.h>
+#include "../include/headers/player_manager.h"
+#include "../include/headers/texture_manager.h"
+#include "../include/headers/player_skill_e.h"
+#include "../include/headers/sound_manager.h"
 PlayerManager::PlayerManager(const char *texture_file, int orig_x, int orig_y)
 {
     xdif = ydif = 0;

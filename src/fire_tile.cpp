@@ -1,6 +1,6 @@
-#include <fire_tile.h>
-#include <boss.h>
-#include <player_manager.h>
+#include "../include/headers/fire_tile.h"
+#include "../include/headers/boss.h"
+#include "../include/headers/player_manager.h"
 FireTile::FireTile(int _damage, int _duration)
 {
     damage = _damage;

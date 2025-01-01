@@ -1,7 +1,7 @@
-#include <boss_guider.h>
-#include <texture_manager.h>
-#include <boss.h>
-#include <player_manager.h>
+#include "../include/headers/boss_guider.h"
+#include "../include/headers/texture_manager.h"
+#include "../include/headers/boss.h"
+#include "../include/headers/player_manager.h"
 BossGuider::BossGuider()
 {
     circle = TextureManager::LoadTexture("img/enemy/boss_guider_circle.png");

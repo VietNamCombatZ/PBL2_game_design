@@ -1,7 +1,7 @@
 #pragma once
 
-#include <sprite_component.h>
-#include <transform_component.h>
+#include "sprite_component.h"
+#include "transform_component.h"
 
 class Bullet
 {

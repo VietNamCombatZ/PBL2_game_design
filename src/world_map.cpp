@@ -1,12 +1,12 @@
-#include <world_map.h>
-#include <player_manager.h>
-#include <enemy_generator.h>
-#include <player_skill_q.h>
-#include <player_skill_e.h>
-#include <arrow_direction.h>
-#include <boss.h>
-#include <boss_guider.h>
-#include <sound_manager.h>
+#include "../include/headers/world_map.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/enemy_generator.h"
+#include "../include/headers/player_skill_q.h"
+#include "../include/headers/player_skill_e.h"
+#include "../include/headers/arrow_direction.h"
+#include "../include/headers/boss.h"
+#include "../include/headers/boss_guider.h"
+#include "../include/headers/sound_manager.h"
 WorldMap::WorldMap()
 {
     perlin_noise = new PerlinNoise();

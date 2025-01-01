@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SDL_ttf.h>
-#include <sprite_component.h>
-#include <transform_component.h>
+#include "../sdl2/SDL_ttf.h"
+#include "sprite_component.h"
+#include "transform_component.h"
 #include <string>
 #include <algorithm>
 class PlayerStatsBar

@@ -1,0 +1,1 @@
+../../Cellar/sdl2_image/2.8.2_2/lib/pkgconfig/SDL2_image.pc

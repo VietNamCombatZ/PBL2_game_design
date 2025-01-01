@@ -1,9 +1,9 @@
-#pragma once 
-
-#include <texture_manager.h>
+#pragma once
 #include <random>
 #include <array>
-#include <perlin_noise.h>
+#include "texture_manager.h"
+
+#include "perlin_noise.h"
 
 
 class WorldMap 

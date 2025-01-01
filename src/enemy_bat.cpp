@@ -1,8 +1,8 @@
-#include <enemy_bat.h>
-#include <player_manager.h>
-#include <world_map.h>
-#include <shooter.h>
-#include <sound_manager.h>
+#include "../include/headers/enemy_bat.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/world_map.h"
+#include "../include/headers/shooter.h"
+#include "../include/headers/sound_manager.h"
 EnemyBat::EnemyBat(int x, int y)
 {
     transform = new TransformComponent(x, y, 1, 50, 28);

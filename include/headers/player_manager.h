@@ -1,9 +1,9 @@
 #pragma once
-#include <transform_component.h>
-#include <sprite_component.h>
-#include <animation.h>
-#include <player_stats_bar.h>
-#include <player_skill_q.h>
+#include "transform_component.h"
+#include "sprite_component.h"
+#include "animation.h"
+#include "player_stats_bar.h"
+#include "player_skill_q.h"
 
 class PlayerManager
 {

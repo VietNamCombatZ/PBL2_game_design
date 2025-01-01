@@ -1,5 +1,5 @@
-#include <sound_manager.h>
-#include <texture_manager.h>
+#include "../include/headers/sound_manager.h"
+#include "../include/headers/texture_manager.h"
 SoundManager::SoundManager()
 {
     is_playing_boss_bgm = false;

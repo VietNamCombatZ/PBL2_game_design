@@ -1,17 +1,17 @@
-#include <game.h>
-#include <player_manager.h>
-#include <world_map.h>
-#include <enemy_skeleton.h>
-#include <texture_manager.h>
-#include <enemy_generator.h>
-#include <player_skill_q.h>
-#include <player_skill_e.h>
-#include <arrow_direction.h>
-#include <shooter.h>
-#include <level_manager.h>
-#include <boss.h>
-#include <boss_guider.h>
-#include <sound_manager.h>
+#include "../include/headers/game.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/world_map.h"
+#include "../include/headers/enemy_skeleton.h"
+#include "../include/headers/texture_manager.h"
+#include "../include/headers/enemy_generator.h"
+#include "../include/headers/player_skill_q.h"
+#include "../include/headers/player_skill_e.h"
+#include "../include/headers/arrow_direction.h"
+#include "../include/headers/shooter.h"
+#include "../include/headers/level_manager.h"
+#include "../include/headers/boss.h"
+#include "../include/headers/boss_guider.h"
+#include "../include/headers/sound_manager.h"
 
 SDL_Renderer *Game::renderer = nullptr;
 SDL_Window *Game::window = nullptr;
@@ -152,24 +152,26 @@ bool Game::InsideExitButton(int x, int y)
 
 int Game::UpdateMouse() 
 {
-    int mousex, mousey;
+    int mousex, mousey; //coordinates of the mouse
 
-    SDL_PumpEvents();
+    SDL_PumpEvents(); // update event state
 
-    Uint32 buttons = SDL_GetMouseState(&mousex, &mousey);
+    Uint32 buttons = SDL_GetMouseState(&mousex, &mousey); // get mouse state
 
-    bool changed = false;
-    int play = InsidePlayButton(mousex, mousey);
+    bool changed = false; // check if button state changed
+    int play = InsidePlayButton(mousex, mousey); // check if mouse is inside play button
     int help = InsideHelpButton(mousex, mousey);
     int exit = InsideExitButton(mousex, mousey);
 
+     // if button state changed or mouse is inside a button return the corresponding value  
     if (play != play_button_state || help != help_button_state || exit != exit_button_state)
         changed = true;
     play_button_state = play;
     help_button_state = help;
     exit_button_state = exit;
 
-    if (help && (buttons & SDL_BUTTON_LMASK) != 0)
+    // if left mouse button is pressed
+    if (help && (buttons & SDL_BUTTON_LMASK) != 0) // if mouse is inside play button and left mouse button is pressed
         return 1;
     if (exit && (buttons & SDL_BUTTON_LMASK) != 0)
         return 2;

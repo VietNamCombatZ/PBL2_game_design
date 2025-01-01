@@ -1,7 +1,7 @@
-#include <enemy_skeleton.h>
-#include <player_manager.h>
-#include <world_map.h>
-#include <sound_manager.h>
+#include "../include/headers/enemy_skeleton.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/world_map.h"
+#include "../include/headers/sound_manager.h"
 EnemySkeleton::EnemySkeleton(int x, int y)
 {
     transform = new TransformComponent(x, y, 1, 70, 40);

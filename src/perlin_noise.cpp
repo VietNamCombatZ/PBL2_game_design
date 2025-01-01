@@ -1,4 +1,4 @@
-#include <perlin_noise.h>
+#include "../include/headers/perlin_noise.h"
 #include <ctime>
 
 PerlinNoise::PerlinNoise() 

@@ -479,7 +479,12 @@ extern DECLSPEC void *SDLCALL SDL_memset(SDL_OUT_BYTECAP(len) void *dst, int c, 
 SDL_FORCE_INLINE void SDL_memset4(void *dst, Uint32 val, size_t dwords)
 {
 #ifdef __APPLE__
-    memset_pattern4(dst, &val, dwords * 4);
+    // memset_pattern4(dst, &val, dwords * 4);
+    Uint32 *dst32 = SDL_static_cast(Uint32 *, dst);
+    for (size_t i = 0; i < dwords; ++i)
+    {
+        dst32[i] = val;
+    }
 #elif defined(__GNUC__) && defined(__i386__)
     int u0, u1, u2;
     __asm__ __volatile__ (

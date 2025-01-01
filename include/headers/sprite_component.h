@@ -1,9 +1,9 @@
 #pragma once
-#include <texture_manager.h>
-#include <transform_component.h>
-#include <animation.h>
-#include <map>
-#include <string>
+#include "texture_manager.h"
+#include "transform_component.h"
+#include "animation.h"
+#include "map"
+#include "string"
 class SpriteComponent
 {
 private:

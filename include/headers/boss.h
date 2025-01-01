@@ -1,9 +1,9 @@
 #pragma once
-#include <transform_component.h>
-#include <sprite_component.h>
-#include <fire_tile.h>
+#include "transform_component.h"
+#include "sprite_component.h"
+#include "fire_tile.h"
 #include <vector>
-#include <enemy_health_bar.h>
+#include "enemy_health_bar.h"
 class Boss
 {
 public:

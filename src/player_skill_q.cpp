@@ -1,9 +1,9 @@
-#include <player_skill_q.h>
-#include <player_manager.h>
-#include <enemy_generator.h>
-#include <point_2d.h>
-#include <boss.h>
-#include <sound_manager.h>
+#include "../include/headers/player_skill_q.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/enemy_generator.h"
+#include "../include/headers/point_2d.h"
+#include "../include/headers/boss.h"
+#include "../include/headers/sound_manager.h"
 PlayerSkillQ::PlayerSkillQ()
 {
     cooldown = 0;

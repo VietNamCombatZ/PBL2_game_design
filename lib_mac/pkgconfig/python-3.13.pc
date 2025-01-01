@@ -1,0 +1,1 @@
+../../Cellar/python@3.13/3.13.0_1/lib/pkgconfig/python-3.13.pc

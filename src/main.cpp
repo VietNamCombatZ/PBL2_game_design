@@ -1,5 +1,6 @@
-#include <game.h>
-#include <SDL_ttf.h>
+#include "../include/headers/game.h"
+#include "../include/sdl2/SDL_ttf.h"
+#include "../include/headers/game.h"
 const int FPS = 60;
 const int FRAME_MAX_DELAY = 1000 / FPS;
 const int WINDOW_WIDTH = 800;

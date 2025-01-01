@@ -1,0 +1,1 @@
+../../Cellar/freetype/2.13.3/lib/pkgconfig/freetype2.pc

@@ -1,4 +1,4 @@
-#include <enemy_health_bar.h>
+#include "../include/headers/enemy_health_bar.h"
 
 // TODO: Optimize health bars
 EnemyHealthBar::EnemyHealthBar(TransformComponent *_transform, int _w, int _h, int _full_health)

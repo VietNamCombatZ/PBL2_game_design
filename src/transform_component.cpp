@@ -1,4 +1,4 @@
-#include <transform_component.h>
+#include "../include/headers/transform_component.h"
 
 TransformComponent::TransformComponent(int _x, int _y, double _speed, int _w, int _h)
 {

@@ -1,0 +1,1 @@
+../../Cellar/isl/0.27/lib/pkgconfig/isl.pc

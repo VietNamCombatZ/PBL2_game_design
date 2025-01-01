@@ -1,6 +1,6 @@
-#include <player_stats_bar.h>
-#include <game.h>
-#include <player_manager.h>
+#include "../include/headers/player_stats_bar.h"
+#include "../include/headers/game.h"
+#include "../include/headers/player_manager.h"
 PlayerStatsBar::PlayerStatsBar()
 {
     font = TTF_OpenFont("fonts/number_font.ttf", 15);

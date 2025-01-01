@@ -1,6 +1,6 @@
-#include <bullet.h>
-#include <point_2d.h>
-#include <player_manager.h>
+#include "../include/headers/bullet.h"
+#include "../include/headers/point_2d.h"
+#include "../include/headers/player_manager.h"
 Bullet::Bullet(int x, int y, bool advanced)
 {
     if (advanced)

@@ -1,6 +1,6 @@
 #pragma once
-#include <SDL_mixer.h>
-#include <SDL_image.h>
+#include "../sdl2/SDL_mixer.h"
+#include "../sdl2/SDL_image.h"
 class SoundManager
 {
 public:

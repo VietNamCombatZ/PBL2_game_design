@@ -1,8 +1,8 @@
-#include <level_manager.h>
-#include <player_manager.h>
-#include <player_skill_q.h>
-#include <player_skill_e.h>
-#include <sound_manager.h>
+#include "../include/headers/level_manager.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/player_skill_q.h"
+#include "../include/headers/player_skill_e.h"
+#include "../include/headers/sound_manager.h"
 LevelManager::LevelManager()
 {
     cur_hp = 0;

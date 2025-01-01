@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL_image.h>
+#include "../sdl2/SDL_image.h"
 class BossGuider
 {
 public:

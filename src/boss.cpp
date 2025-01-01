@@ -1,9 +1,10 @@
-#include <boss.h>
 #include <random>
-#include <player_manager.h>
-#include <shooter.h>
-#include <enemy_generator.h>
-#include <sound_manager.h>
+
+#include "../include/headers/boss.h"
+#include "../include/headers/player_manager.h"
+#include "../include/headers/shooter.h"
+#include "../include/headers/enemy_generator.h"
+#include "../include/headers/sound_manager.h"
 Boss::Boss()
 {
     start_x = (rand() % 2 ? 1 : -1) * (rand() % 5009);
@@ -13,7 +14,7 @@ Boss::Boss()
 
     transform = new TransformComponent(start_x, start_y, 0, 90, 90);
     sprite = new SpriteComponent("img/enemy/boss.png", transform, true);
-    health = 10000;
+    health = 1000;
     health_bar = new EnemyHealthBar(transform, 80, 7, health);
     AddAnimations();
     sprite->ApplyAnimation("walk_right");

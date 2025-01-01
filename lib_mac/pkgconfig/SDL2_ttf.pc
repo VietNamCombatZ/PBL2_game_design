@@ -1,0 +1,1 @@
+../../Cellar/sdl2_ttf/2.22.0/lib/pkgconfig/SDL2_ttf.pc

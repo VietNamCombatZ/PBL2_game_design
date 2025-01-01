@@ -1,0 +1,42 @@
+clang++ -std=c++17 src/*.cpp -o main $(sdl2-config --cflags --libs) -Iinclude -Iinclude/sdl2 -Iinclude/headers -I/opt/homebrew/include/SDL2 -L/opt/homebrew/lib -lSDL2 -lSDL2_image -lSDL2_ttf
+
+
+#Step by step to run
+1. Change SDL_stdinc.h
+- Inside include/sdl2/SDL_stdinc.h: (notice from line 479 to 487)
+SDL_FORCE_INLINE void SDL_memset4(void *dst, Uint32 val, size_t dwords)
+{
+#ifdef __APPLE__
+    // memset_pattern4(dst, &val, dwords * 4);
+    Uint32 *dst32 = SDL_static_cast(Uint32 *, dst);
+    for (size_t i = 0; i < dwords; ++i)
+    {
+        dst32[i] = val;
+    }
+
+- Change: memset_pattern4(dst, &val, dwords * 4);
+to:
+Uint32 *dst32 = SDL_static_cast(Uint32 *, dst);
+    for (size_t i = 0; i < dwords; ++i)
+    {
+        dst32[i] = val;
+    }
+
+2. Change launch.json:
+Change:
+"cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/main",
+
+To:
+"cwd": "${workspaceFolder}/src",
+      "program": "${workspaceFolder}/src/main",
+
+
+3. Compile
+clang++ -std=c++17 src/*.cpp -o main $(sdl2-config --cflags --libs) -Iinclude -Iinclude/sdl2 -Iinclude/headers -I/opt/homebrew/include/SDL2 -Llib_mac -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
+
+4. Run 
+./main
+
+
+

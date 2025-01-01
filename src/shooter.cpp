@@ -1,5 +1,5 @@
-#include <shooter.h>
-#include <sound_manager.h>
+#include "../include/headers/shooter.h"
+#include "../include/headers/sound_manager.h"
 Shooter::Shooter() {}
 Shooter::~Shooter() 
 {
