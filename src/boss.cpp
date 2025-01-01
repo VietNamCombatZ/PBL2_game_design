@@ -168,8 +168,8 @@ void Boss::ExecuteSpawnMonster()
 {
     for (int i = 0; i < skill_spawn.number; i++)
     {
-        if (enemy_generator->bat_container.size() < 30) 
-            enemy_generator->AddNewBat(transform->x + 40, transform->y + 40);
+        // if (enemy_generator->bat_container.size() < 30) 
+        //     enemy_generator->AddNewBat(transform->x + 40, transform->y + 40);
         if (enemy_generator->skeleton_container.size() < 30) 
             enemy_generator->AddNewSkeleton(transform->x + 40, transform->y + 40);
     }

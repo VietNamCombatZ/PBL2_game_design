@@ -8,8 +8,8 @@ EnemyGenerator::EnemyGenerator()
 }
 EnemyGenerator::~EnemyGenerator() 
 {
-    for (EnemyBat *&e : bat_container)
-        delete e;
+    // for (EnemyBat *&e : bat_container)
+    //     delete e;
     for (EnemySkeleton *&e : skeleton_container)
         delete e;
 }
@@ -20,11 +20,11 @@ void EnemyGenerator::AddNewSkeleton(int x, int y)
     EnemySkeleton *enemy = new EnemySkeleton(x, y);
     skeleton_container.push_back(enemy);
 }
-void EnemyGenerator::AddNewBat(int x, int y)
-{
-    EnemyBat *enemy = new EnemyBat(x, y);
-    bat_container.push_back(enemy);
-}
+// void EnemyGenerator::AddNewBat(int x, int y)
+// {
+//     EnemyBat *enemy = new EnemyBat(x, y);
+//     bat_container.push_back(enemy);
+// }
 void EnemyGenerator::Update()
 {   
     
@@ -65,8 +65,8 @@ void EnemyGenerator::Update()
             {
                 int index = rand() % ((int) grass.size());
                 AddNewSkeleton(grass[index].first + player->xdif, grass[index].second + player->ydif);
-                index = rand() % ((int) grass.size());
-                AddNewBat(grass[index].first + player->xdif, grass[index].second + player->ydif);
+                // index = rand() % ((int) grass.size());
+                // AddNewBat(grass[index].first + player->xdif, grass[index].second + player->ydif);
             } 
             
         }
@@ -83,22 +83,22 @@ void EnemyGenerator::Update()
             delete e;
     }
     skeleton_container = std::move(tmp);
-    std::vector<EnemyBat*> tmp1;
-    for (EnemyBat *&e : bat_container)
-    {
-        if (e->IsAlive() && e->IsInsideLivingZone())
-        {
-            e->Update();
-            tmp1.push_back(e);
-        } else 
-            delete e;
-    }
-    bat_container = std::move(tmp1);
+    // std::vector<EnemyBat*> tmp1;
+    // for (EnemyBat *&e : bat_container)
+    // {
+    //     if (e->IsAlive() && e->IsInsideLivingZone())
+    //     {
+    //         e->Update();
+    //         tmp1.push_back(e);
+    //     } else 
+    //         delete e;
+    // }
+    // bat_container = std::move(tmp1);
 }
 void EnemyGenerator::Render()
 {
     for (EnemySkeleton *&e : skeleton_container)
         e->Render();
-    for (EnemyBat *&e : bat_container)
-        e->Render();
+    // for (EnemyBat *&e : bat_container)
+    //     e->Render();
 }

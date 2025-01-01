@@ -242,18 +242,18 @@ void PlayerSkillQ::UpdateHitEnemy()
                 e->DecHealth(2 * player->attack);
             } 
         }
-    for (EnemyBat *&e : enemy_generator->bat_container)
-        if (e->IsInsideMovingZone())
-        {
-            int x0 = e->transform->x + 14;
-            int y0 = e->transform->y + 5;
-            int x1 = x0 + 25;
-            int y1 = y0 + 20;
-            if (IsCollide(x0, y0, x1, y1))
-            {
-                e->DecHealth(2 * player->attack);
-            } 
-        }
+    // for (EnemyBat *&e : enemy_generator->bat_container)
+    //     if (e->IsInsideMovingZone())
+    //     {
+    //         int x0 = e->transform->x + 14;
+    //         int y0 = e->transform->y + 5;
+    //         int x1 = x0 + 25;
+    //         int y1 = y0 + 20;
+    //         if (IsCollide(x0, y0, x1, y1))
+    //         {
+    //             e->DecHealth(2 * player->attack);
+    //         } 
+    //     }
     if (boss->IsInsideActiveZone())
     {
         int x0 = boss->transform->x + 20;
